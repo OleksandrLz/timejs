@@ -13,10 +13,15 @@ var time = new TimeJS();  // creates an instance of the library with the current
 ### Methods, properties and examples
 
 **day** - get day
+
 **month** - get month
+
 **year** - get year
+
 **hours** - get year
+
 **minutes** - get year
+
 **seconds** - get year
 ```
 time.day(); // get todays date
