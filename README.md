@@ -32,26 +32,28 @@ time.day(); // get todays date
 ```js
 time.format('HH:mm'); //get current time: hours and minutes
 time.format('MM:YY'); //get current time: month and year
-
+/*
     HH - hours
     mm - minutes
     ss - seconds
     dd - day
     MM - month
     YY - year
+*/
 ```
 
 **add** - method to add some time interval to instance 
 ```js
 time.add(2, "HH"); // will add 2 hours to time state
 time.add(4, "mm"); // will add 4 minutes to time state
-
+/*
     HH - hours
     mm - minutes
     ss - seconds
     dd - day
     MM - month
     YY - year
+*/
 ```
 
 **isEqual** -  method to compare 2 instance and return if they are equal
