@@ -24,12 +24,12 @@ var time = new TimeJS();  // creates an instance of the library with the current
 **minutes** - get year
 
 **seconds** - get year
-```
+```js
 time.day(); // get todays date
 ```
 
 **format** - get current time in format with colons (":"). Regardless of the order in which the parameters are passed, they separated by ":".
-```
+```js
 time.format('HH:mm'); //get current time: hours and minutes
 time.format('MM:YY'); //get current time: month and year
 
@@ -42,7 +42,7 @@ time.format('MM:YY'); //get current time: month and year
 ```
 
 **add** - method to add some time interval to instance 
-```
+```js
 time.add(2, "HH"); // will add 2 hours to time state
 time.add(4, "mm"); // will add 4 minutes to time state
 
@@ -55,16 +55,16 @@ time.add(4, "mm"); // will add 4 minutes to time state
 ```
 
 **isEqual** -  method to compare 2 instance and return if they are equal
-```
+```js
 time1.isEqualTo(time); // returns false or true
 ```
 
 **greaterThen** -  method to compare 2 instance and return if 1 grater then other
-```
+```js
 time1.greaterThen(time); // returns false or true
 ```
 
 **getInstanceCount** - shows the number of instances created by TimeJS
-```
+```js
 TimeJS.getInstanceCount(); // returns 1
 ```
