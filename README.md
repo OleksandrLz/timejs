@@ -63,3 +63,8 @@ time1.isEqualTo(time); // returns false or true
 ```
 time1.greaterThen(time); // returns false or true
 ```
+
+**getInstanceCount** - shows the number of instances created by TimeJS
+```
+TimeJS.getInstanceCount(); // returns 1
+```
