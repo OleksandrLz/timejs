@@ -7,11 +7,12 @@ function TimeJS(){
     
   // callError 9-14
   function callError(condition, message) {
-    if (condition) {
-       throw new Error(message);
+    if (!condition) {
+      throw new Error(message);
     }
   }
-  callError(isNaN(addTime), "time interval is not a number");
+  var type = typeof addTime;
+  callError(type === "number", "time interval is not a number");
   
     if (form == 'HH'){
       return dateObj.setHours(dateObj.getHours() + addTime);
