@@ -98,6 +98,39 @@ this.format = function(myDate){
   };
   // method to count instance of function
   TimeJS.count++;
+  
+    // method fromNow ??? 103-132
+  this.fromNow = function(format){
+    var nowTime = +new Date();
+    var differ = nowTime - createTimeStamp; // in milliseconds
+    
+    var sec=differ/1000;
+    var days=Math.floor(sec/60/60/24);
+    sec-=days*24*60*60;
+    var hours=Math.floor(sec/60/60);
+    sec-=hours*60*60;
+    var min=Math.floor(sec/60);
+    sec-=min*60;
+    
+    var dateDiff = format.split(':');
+    var diffArr = [];
+     for (var i=0; i < dateDiff.length; i++ ){
+    if (dateDiff[i] == 'HH'){
+      diffArr.push(hours);
+    }
+    if (dateDiff[i] == 'mm'){
+      diffArr.push(min);
+    }
+    if (dateDiff[i] == 'ss'){
+      diffArr.push(sec);
+    }
+    if (dateDiff[i] == 'dd'){
+      diffArr.push(days);
+    }
+  }
+  return alert(diffArr.join(':'));
+  };
+  
 }
 
 TimeJS.count = 0;
