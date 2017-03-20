@@ -5,7 +5,7 @@ function TimeJS(){
  
   this.add = function(addTime, form){
     
-  // callError 9-14
+  // callError 9-15
   function callError(condition, message) {
     if (!condition) {
       throw new Error(message);
