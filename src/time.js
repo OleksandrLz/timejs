@@ -94,13 +94,13 @@ function TimeJS(date) {
 	this.fromNow = function (format) {
 		var differ = (this.time - date) / 1000; // in seconds
 		var formatDate = [
-      Math.floor(differ / (24 * 60 * 60)),
-      Math.floor(differ / (24 * 60 * 60 * 30)),
-      Math.floor(differ / (24 * 60 * 60 * 365)),
-      Math.floor(differ / (60 * 60)),
-      Math.floor(differ / (60)),
-      differ
-    ];
+      			Math.floor(differ / (24 * 60 * 60)),
+      			Math.floor(differ / (24 * 60 * 60 * 30)),
+      			Math.floor(differ / (24 * 60 * 60 * 365)),
+      			Math.floor(differ / (60 * 60)),
+      			Math.floor(differ / (60)),
+      			differ
+    		];
 		var dateArr = format.split(':');
 		var diffArr = [];
 		for (var i = 0; i < dateArr.length; i++) {
