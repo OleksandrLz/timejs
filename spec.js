@@ -41,24 +41,24 @@ function TimeJS(date) {
 		var dArr = [];
 		for (var i = 0; i < dateArr.length; i++) {
 			switch (dateArr[i]) {
-			case 'HH':
-				dArr.push(formatDate[3]);
-				break;
-			case 'mm':
-				dArr.push(formatDate[4]);
-				break;
-			case 'ss':
-				dArr.push(formatDate[5]);
-				break;
-			case 'dd':
-				dArr.push(formatDate[0]);
-				break;
-			case 'MM':
-				dArr.push(formatDate[1]);
-				break;
-			case 'YY':
-				dArr.push(formatDate[2]);
-				break;
+				case 'HH':
+					dArr.push(formatDate[3]);
+					break;
+				case 'mm':
+					dArr.push(formatDate[4]);
+					break;
+				case 'ss':
+					dArr.push(formatDate[5]);
+					break;
+				case 'dd':
+					dArr.push(formatDate[0]);
+					break;
+				case 'MM':
+					dArr.push(formatDate[1]);
+					break;
+				case 'YY':
+					dArr.push(formatDate[2]);
+					break;
 			}
 		}
 		return alert(dArr.join(':'));
@@ -66,18 +66,18 @@ function TimeJS(date) {
 	//   method to add some time interval to instance
 	this.add = function (addTime, dFormat) {
 		switch (dFormat) {
-		case 'HH':
-			return this.dateObj.setHours(this.dateObj.getHours() + addTime);
-		case 'mm':
-			return this.dateObj.setMinutes(this.dateObj.getMinutes() + addTime);
-		case 'ss':
-			return this.dateObj.setSeconds(this.dateObj.getSeconds() + addTime);
-		case 'dd':
-			return this.dateObj.setDate(this.dateObj.getDate() + addTime);
-		case 'MM':
-			return this.dateObj.setMonth(this.dateObj.getMonth() + addTime);
-		case 'YY':
-			return this.dateObj.setFullYear(this.dateObj.getFullYear() + addTime);
+			case 'HH':
+				return this.dateObj.setHours(this.dateObj.getHours() + addTime);
+			case 'mm':
+				return this.dateObj.setMinutes(this.dateObj.getMinutes() + addTime);
+			case 'ss':
+				return this.dateObj.setSeconds(this.dateObj.getSeconds() + addTime);
+			case 'dd':
+				return this.dateObj.setDate(this.dateObj.getDate() + addTime);
+			case 'MM':
+				return this.dateObj.setMonth(this.dateObj.getMonth() + addTime);
+			case 'YY':
+				return this.dateObj.setFullYear(this.dateObj.getFullYear() + addTime);
 		}
 	};
 	// method isEqualTo - compare 2 instance and return if they are equal
@@ -105,24 +105,24 @@ function TimeJS(date) {
 		var diffArr = [];
 		for (var i = 0; i < dateArr.length; i++) {
 			switch (dateArr[i]) {
-			case 'HH':
-				diffArr.push(formatDate[3]);
-				break;
-			case 'mm':
-				diffArr.push(formatDate[4]);
-				break;
-			case 'ss':
-				diffArr.push(formatDate[5]);
-				break;
-			case 'dd':
-				diffArr.push(formatDate[0]);
-				break;
-			case 'MM':
-				diffArr.push(formatDate[1]);
-				break;
-			case 'YY':
-				diffArr.push(formatDate[2]);
-				break;
+				case 'HH':
+					diffArr.push(formatDate[3]);
+					break;
+				case 'mm':
+					diffArr.push(formatDate[4]);
+					break;
+				case 'ss':
+					diffArr.push(formatDate[5]);
+					break;
+				case 'dd':
+					diffArr.push(formatDate[0]);
+					break;
+				case 'MM':
+					diffArr.push(formatDate[1]);
+					break;
+				case 'YY':
+					diffArr.push(formatDate[2]);
+					break;
 			}
 		}
 		return alert(diffArr.join(':'));
