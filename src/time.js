@@ -134,5 +134,4 @@ TimeJS.count++;
 TimeJS.count = 0;
 TimeJS.getInstanceCount = function () {
 	alert(this.count);
-	alert(this.count);
 };
