@@ -28,14 +28,14 @@ var time = new TimeJS();  // creates an instance of the library with the current
 time.day(); // get todays date
 ```
 
-**local** - method that get local time
+**local** - get local time
 ```js
-time.local(); // get local time
+time.local(); // local time
 ```
 
-**utc** - method that get UTC time
+**utc** - get UTC time
 ```js
-time.utc(); // get UTC time
+time.utc(); // UTC time
 ```
 
 **format** - get current time in format
