@@ -19,26 +19,42 @@ var time = new TimeJS();  // creates an instance of the library with the current
 
 **year** - get year
 
-**hours** - get year
+**hours** - get hours
 
-**minutes** - get year
+**minutes** - get minutes
 
-**seconds** - get year
+**seconds** - get seconds
 ```js
 time.day(); // get todays date
 ```
 
-**format** - get current time in format with colons (":"). Regardless of the order in which the parameters are passed, they separated by ":".
+**local** - method that get local time
 ```js
-time.format('HH:mm'); //get current time: hours and minutes
-time.format('MM:YY'); //get current time: month and year
+time.local(); // get local time
+```
+
+**utc** - method that get UTC time
+```js
+time.utc(); // get UTC time
+```
+
+**format** - get current time in format
+```js
+time.format('LT'); //get time in format: 8:30 PM
+time.format('III'); //get time in format: Sep 4 1986 8:30 PM
 /*
-    HH - hours
-    mm - minutes
-    ss - seconds
-    dd - day
-    MM - month
-    YY - year
+| Format        | Time			 | 
+| ------------- | -------------	 | 
+| LT            | 8:30 PM         | 
+| LTS           | 8:30:25 PM      | 
+| L             | 09/04/1986      | 
+| I             | 9/4/1986        | 
+| LL            | September 4 1986      | 
+| II            | Sep 4 1986               | 
+| LLL           | September 4 1986 8:30 PM           | 
+| III           | Sep 4 1986 8:30 PM            | 
+| LLLL          | Thursday, September 4 1986 8:30 PM            |
+| IIII          | Thu, Sep 4 1986 8:30 PM            |
 */
 ```
 
@@ -68,5 +84,10 @@ time1.greaterThen(time); // returns false or true
 
 **getInstanceCount** - shows the number of instances created by TimeJS
 ```js
-TimeJS.getInstanceCount(); // returns number
+TimeJS.getInstanceCount(); // returns 1
+```
+
+**toArray** - method that will returns an array that mirrors the parameters from Date
+```js
+time.toArray(); // returns [2013, 1, 4, 14, 40, 16, 154];
 ```
