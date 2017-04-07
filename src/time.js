@@ -47,13 +47,13 @@ function TimeJS(date) {
 	
 	// method isEqualTo - compare 2 instance and return if they are equal
 	this.isEqualTo = function (compDate) {
-		var equal = this.dateObj.getTime() === compDate.getTime();
+		var equal = this.dateObj.getTime() === compDate.dateObj.getTime();
 		return alert(equal);
 	};
 	
 	// method greaterThen - compare 2 instance and return if 1 grater then other
 	this.greaterThen = function (compDate) {
-		return alert(this.dateObj.getTime() > compDate.getTime());
+		return alert(this.dateObj.getTime() > compDate.dateObj.getTime());
 	};
 	
 	// method fromNow
