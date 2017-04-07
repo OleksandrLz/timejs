@@ -42,6 +42,7 @@ time.utc(); // get UTC time
 ```js
 time.format('LT'); //get time in format: 8:30 PM
 time.format('III'); //get time in format: Sep 4 1986 8:30 PM
+```
 /*
 | Format        | Time			 | 
 | ------------- | -------------	 | 
@@ -56,7 +57,7 @@ time.format('III'); //get time in format: Sep 4 1986 8:30 PM
 | LLLL          | Thursday, September 4 1986 8:30 PM            |
 | IIII          | Thu, Sep 4 1986 8:30 PM            |
 */
-```
+
 
 **add** - method to add some time interval to instance 
 ```js
