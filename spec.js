@@ -47,13 +47,13 @@ function TimeJS(date) {
 	
 	// method isEqualTo - compare 2 instance and return if they are equal
 	this.isEqualTo = function (compDate) {
-		var equal = this.dateObj.getTime() === compDate.getTime();
+		var equal = this.dateObj.getTime() === compDate.dateObj.getTime();
 		return alert(equal);
 	};
 	
 	// method greaterThen - compare 2 instance and return if 1 grater then other
 	this.greaterThen = function (compDate) {
-		return alert(this.dateObj.getTime() > compDate.getTime());
+		return alert(this.dateObj.getTime() > compDate.dateObj.getTime());
 	};
 	
 	// method fromNow
@@ -200,12 +200,7 @@ TimeJS.getInstanceCount = function () {
 };
 
 
-var todayTimeStamp = +new Date; // Unix timestamp in milliseconds
-var oneDayTimeStamp = 1000 * 60 * 60 * 24; // Milliseconds in a day
-var diff = todayTimeStamp - oneDayTimeStamp;
-var yesterdayDate = new Date(diff);
-
-var yesterday = new TimeJS(yesterdayDate); // создает экземпляр библиотеки на вчерашнюю дату
+var time = new TimeJS(new Date()); 
 
 // get date, years, minutes
 
@@ -225,12 +220,12 @@ time.format("IIII");
 
 // adds time to current time in the appropriate format
 
-var time2 = new TimeJS();
+var time2 = new TimeJS(new Date());
 time2.add(2, "HH"); 
 time2.add(4, "MM");
 time2.add(3, "YY");
-time2.format("HH:mm:ss");
-time2.format("dd:MM:YY");
+time2.format("II");
+time2.format("IIII");
 
 
 // shows the number of instances created by TimeJS
@@ -251,3 +246,4 @@ time.utc(); // get utc time
 // method to create an array that mirrors the parameters from Date
 
 time.toArray();
+
