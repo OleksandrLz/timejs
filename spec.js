@@ -1,13 +1,18 @@
 function TimeJS(date) {
 	this.dateObj = date;
 	this.time = new Date();
+	/** 
+	и так все таки мы уже работаем с более или менее серйозным JS кодом предлагаю все alert заменить на console.log
+	*/
 
 	function callError(condition, message) {
 		if (!condition) {
 			throw new Error(message);
 		}
 	}
+	
 	callError(date instanceof Date, "Please pass an instance of date to library");
+	
 	this.day = function () {
 		alert(this.dateObj.getDate());
 	};
@@ -43,6 +48,8 @@ function TimeJS(date) {
 		case 'YY':
 			return this.dateObj.setFullYear(this.dateObj.getFullYear() + addTime);
 		}
+		/** здесь нужно бы добавить default чтобы если например туда передаешь неправильный формат какойто не ошибка была или не undefined
+		а просто чтобы возвращало false или текущую дату в одном из форматов какой выберешь */
 	};
 	
 	// method isEqualTo - compare 2 instance and return if they are equal
@@ -90,7 +97,9 @@ function TimeJS(date) {
 				diffArr.push(formatDate[2]);
 				break;
 			}
+		/** здесь нужно бы тоже добавить default */
 		}
+	
 		return alert(diffArr.join(':'));
 	};
 	
@@ -183,6 +192,7 @@ function TimeJS(date) {
 			case 'IIII':
 				alert(formatDate[9]);
 				break;
+		/** здесь нужно бы добавить default */
 		}
 	};
 	
