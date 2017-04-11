@@ -2,29 +2,29 @@ function TimeJS(date) {
 	this.dateObj = date;
 	this.time = new Date();
 
-	function callError(condition, message) {
-		if (!condition) {
-			throw new Error(message);
-		}
-	}
-	callError(date instanceof Date, "Please pass an instance of date to library");
+// 	function callError(condition, message) {
+// 		if (!condition) {
+// 			throw new Error(message);
+// 		}
+// 	}
+// 	callError(date instanceof Date, "Please pass an instance of date to library");
 	this.day = function () {
-		alert(this.dateObj.getDate());
+		console.log(this.dateObj.getDate());
 	};
 	this.month = function () {
-		alert(this.dateObj.getMonth() + 1);
+		console.log(this.dateObj.getMonth() + 1);
 	};
 	this.year = function () {
-		alert(this.dateObj.getFullYear());
+		console.log(this.dateObj.getFullYear());
 	};
 	this.hours = function () {
-		alert(this.dateObj.getHours());
+		console.log(this.dateObj.getHours());
 	};
 	this.minutes = function () {
-		alert(this.dateObj.getMinutes());
+		console.log(this.dateObj.getMinutes());
 	};
 	this.seconds = function () {
-		alert(this.dateObj.getSeconds());
+		console.log(this.dateObj.getSeconds());
 	};
 	
 	//   method to add some time interval to instance
@@ -42,56 +42,56 @@ function TimeJS(date) {
 			return this.dateObj.setMonth(this.dateObj.getMonth() + addTime);
 		case 'YY':
 			return this.dateObj.setFullYear(this.dateObj.getFullYear() + addTime);
+		default:
+			console.log('Enter the correct format');		
 		}
 	};
 	
 	// method isEqualTo - compare 2 instance and return if they are equal
 	this.isEqualTo = function (compDate) {
 		var equal = this.dateObj.getTime() === compDate.dateObj.getTime();
-		return alert(equal);
+		return console.log(equal);
 	};
 	
 	// method greaterThen - compare 2 instance and return if 1 grater then other
 	this.greaterThen = function (compDate) {
-		return alert(this.dateObj.getTime() > compDate.dateObj.getTime());
+		return console.log(this.dateObj.getTime() > compDate.dateObj.getTime());
 	};
 	
 	// method fromNow
 	this.fromNow = function (format) {
-		var differ = (this.time - date) / 1000; // in seconds
-		var formatDate = [
-      Math.floor(differ / (24 * 60 * 60)), 
+	     var differ = (this.time - date) / 1000; // in seconds
+	     var formatDate = [
+             Math.floor(differ / (24 * 60 * 60)), 
 			Math.floor(differ / (24 * 60 * 60 * 30)), 
 			Math.floor(differ / (24 * 60 * 60 * 365)), 
 			Math.floor(differ / (60 * 60)), 
 			Math.floor(differ / (60)), 
 			differ
-		];
-		var dateArr = format.split(':');
-		var diffArr = [];
-		for (var i = 0; i < dateArr.length; i++) {
-			switch (dateArr[i]) {
+	      ];
+		
+		switch (format) {
 			case 'HH':
-				diffArr.push(formatDate[3]);
+				console.log(formatDate[3]);
 				break;
 			case 'mm':
-				diffArr.push(formatDate[4]);
+				console.log(formatDate[4]);
 				break;
 			case 'ss':
-				diffArr.push(formatDate[5]);
+				console.log(formatDate[5]);
 				break;
 			case 'dd':
-				diffArr.push(formatDate[0]);
+				console.log(formatDate[0]);
 				break;
 			case 'MM':
-				diffArr.push(formatDate[1]);
+				console.log(formatDate[1]);
 				break;
 			case 'YY':
-				diffArr.push(formatDate[2]);
+				console.log(formatDate[2]);
 				break;
+			default:
+				console.log('Enter the correct format');
 			}
-		}
-		return alert(diffArr.join(':'));
 	};
 	
 	// method to count instance of function
@@ -99,13 +99,13 @@ function TimeJS(date) {
 	
 	// method local
 	this.local = function () {
-		alert(this.time.toLocaleTimeString());
+		console.log(this.time.toLocaleTimeString());
 	};
 	
 	// method utc
 	this.utc = function () {
 		var timeUtc = this.time.toUTCString();
-		alert(timeUtc.match(/\d+\:\d+\:\d+/));
+		console.log(timeUtc.match(/\d+\:\d+\:\d+/));
 	};
 	
 	//   method format
@@ -154,35 +154,37 @@ function TimeJS(date) {
 		];
 		switch (dateFormat) {
 			case 'LT':
-				alert(formatDate[0]);
+				console.log(formatDate[0]);
 				break;
 			case 'LTS':
-				alert(formatDate[1]);
+				console.log(formatDate[1]);
 				break;
 			case 'L':
-				alert(formatDate[2]);
+				console.log(formatDate[2]);
 				break;
 			case 'I':
-				alert(formatDate[3]);
+				console.log(formatDate[3]);
 				break;
 			case 'LL':
-				alert(formatDate[4]);
+				console.log(formatDate[4]);
 				break;
 			case 'II':
-				alert(formatDate[5]);
+				console.log(formatDate[5]);
 				break;
 			case 'LLL':
-				alert(formatDate[6]);
+				console.log(formatDate[6]);
 				break;
 			case 'III':
-				alert(formatDate[7]);
+				console.log(formatDate[7]);
 				break;
 			case 'LLLL':
-				alert(formatDate[8]);
+				console.log(formatDate[8]);
 				break;
 			case 'IIII':
-				alert(formatDate[9]);
+				console.log(formatDate[9]);
 				break;
+			default:
+				console.log('Enter the correct format');
 		}
 	};
 	
@@ -196,5 +198,5 @@ function TimeJS(date) {
 }
 TimeJS.count = 0;
 TimeJS.getInstanceCount = function () {
-	alert(this.count);
+	console.log(this.count);
 };
