@@ -2,12 +2,6 @@ function TimeJS(date) {
 	this.dateObj = date;
 	this.time = new Date();
 
-// 	function callError(condition, message) {
-// 		if (!condition) {
-// 			throw new Error(message);
-// 		}
-// 	}
-// 	callError(date instanceof Date, "Please pass an instance of date to library");
 	this.day = function () {
 		console.log(this.dateObj.getDate());
 	};
@@ -110,7 +104,6 @@ function TimeJS(date) {
 	
 	//   method format
 	this.format = function (dateFormat) {
-		// callError(dateFormat instanceof String, "Please pass a string to format method");
 		var optionsNum = {
 			year: 'numeric',
 			month: 'numeric',
